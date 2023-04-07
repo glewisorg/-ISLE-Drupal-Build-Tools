@@ -113,3 +113,7 @@ projects[islandoratheme][download][type] = "git"
 projects[islandoratheme][download][branch]  = "master"
 projects[islandoratheme][download][url] = "https://github.com/FLVC/islandoratheme.git"
 projects[islandoratheme][download][overwrite] = TRUE
+
+projects[corolla][type] = "theme"
+projects[corolla][download][type] = "get"
+projects[corolla][download][url] = "https://ftp.drupal.org/files/projects/corolla-7.x-3.1.zip"
