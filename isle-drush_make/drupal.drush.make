@@ -75,7 +75,7 @@ libraries[bookreader][directory_name] = "bookreader"
 libraries[bookreader][type] = "library"
 
 libraries[citeproc-php][download][type] = "get"
-libraries[citeproc-php][download][url] = "https://github.com/FLVC/islandora_libraries/raw/main/cite-proc-php.zip"
+libraries[citeproc-php][download][url] = "https://github.com/FLVC/islandora_libraries/raw/main/citeproc-php.zip"
 libraries[citeproc-php][directory_name] = "citeproc-php"
 libraries[citeproc-php][type] = "library"
 
