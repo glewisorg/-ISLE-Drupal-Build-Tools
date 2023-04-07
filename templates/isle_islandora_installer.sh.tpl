@@ -38,8 +38,8 @@ drush -u 1 -y vset islandora_solr_url "solr:8080/solr"
 drush -u 1 -y vset imagemagick_convert "/usr/local/bin/convert"
 drush -u 1 -y vset image_toolkit "imagemagick"
 drush -u 1 -y vset islandora_ocr_tesseract "/usr/bin/tesseract"
-drush -u 1 -y vset islandora_checksum_checksum_type "SHA-1"
-drush -u 1 -y vset islandora_checksum_enable_checksum "TRUE"
+# drush -u 1 -y vset islandora_checksum_checksum_type "SHA-1"
+# drush -u 1 -y vset islandora_checksum_enable_checksum "TRUE"
 drush -u 1 -y vset islandora_pdf_create_fulltext "1"
 drush -u 1 -y vset islandora_batch_java "/usr/bin/java"
 drush -u 1 -y vset islandora_lame_url "/usr/bin/lame"
@@ -59,13 +59,13 @@ drush -u 1 -y vset --format=json islandora_large_image_viewers '{"name":{"none":
 drush -u 1 -y vset --format=json islandora_newspaper_issue_viewers '{"name":{"none":"none","islandora_internet_archive_bookreader":"islandora_internet_archive_bookreader"},"default":"islandora_internet_archive_bookreader"}'
 drush -u 1 -y vset --format=json islandora_newspaper_page_viewers '{"name":{"none":"none","islandora_openseadragon":"islandora_openseadragon"},"default":"islandora_openseadragon"}'
 drush -u 1 -y vset --format=json islandora_pdf_viewers '{"name": {"none": "none","islandora_pdfjs": "islandora_pdfjs"},"default": "islandora_pdfjs"}'
-drush -u 1 -y vset islandora_openseadragon_iiif_identifier '[islandora_openseadragon:pid]~[islandora_openseadragon:dsid]~[islandora_openseadragon:token]'
+drush -u 1 -y vset islandora_openseadragon_iiif_identifier '[islandora_openseadragon:url_token]'
 drush -u 1 -y vset islandora_openseadragon_iiif_token_header '0'
-drush -u 1 -y vset islandora_openseadragon_iiif_url 'iiif/2'
+drush -u 1 -y vset islandora_openseadragon_iiif_url 'iiif'
 drush -u 1 -y vset islandora_openseadragon_tilesource 'iiif'
-drush -u 1 -y vset islandora_internet_archive_bookreader_iiif_identifier '[islandora_iareader:pid]~[islandora_iareader:dsid]~[islandora_iareader:token]'
+drush -u 1 -y vset islandora_internet_archive_bookreader_iiif_identifier '[islandora_iareader:url_token]'
 drush -u 1 -y vset islandora_internet_archive_bookreader_iiif_token_header '0'
-drush -u 1 -y vset islandora_internet_archive_bookreader_iiif_url 'iiif/2'
+drush -u 1 -y vset islandora_internet_archive_bookreader_iiif_url 'iiif'
 drush -u 1 -y vset islandora_internet_archive_bookreader_pagesource 'iiif'
 
 ## Enable all modules
@@ -85,19 +85,19 @@ drush -y -u 1 en islandora_pdf
 drush -y -u 1 en islandora_audio
 drush -y -u 1 en islandora_book
 drush -y -u 1 en islandora_compound_object
-drush -y -u 1 en islandora_disk_image
+# drush -y -u 1 en islandora_disk_image
 drush -y -u 1 en islandora_entities
 drush -y -u 1 en islandora_entities_csv_import
 drush -y -u 1 en islandora_basic_image
 drush -y -u 1 en islandora_large_image
 drush -y -u 1 en islandora_newspaper
 drush -y -u 1 en islandora_video
-drush -y -u 1 en islandora_web_archive
-drush -y -u 1 en islandora_premis
-drush -y -u 1 en islandora_checksum
-drush -y -u 1 en islandora_checksum_checker
+# drush -y -u 1 en islandora_web_archive
+# drush -y -u 1 en islandora_premis
+# drush -y -u 1 en islandora_checksum
+# drush -y -u 1 en islandora_checksum_checker
 drush -y -u 1 en islandora_book_batch
-drush -y -u 1 en islandora_pathauto
+# drush -y -u 1 en islandora_pathauto
 drush -y -u 1 en islandora_pdfjs
 drush -y -u 1 en islandora_videojs
 drush -y -u 1 en xml_forms
@@ -128,20 +128,31 @@ drush -y -u 1 en xmlsitemap xmlsitemap_custom
 drush -y -u 1 en islandora_xmlsitemap
 drush -y -u 1 en colorbox
 drush -y -u 1 en islandora_internet_archive_bookreader
-drush -y -u 1 en islandora_bagit
+# drush -y -u 1 en islandora_bagit
 drush -y -u 1 en islandora_batch_report
 drush -y -u 1 en islandora_usage_stats
-drush -y -u 1 en islandora_form_fieldpanel
-drush -y -u 1 en islandora_altmetrics
+# drush -y -u 1 en islandora_form_fieldpanel
+# drush -y -u 1 en islandora_altmetrics
 drush -y -u 1 en islandora_populator
 drush -y -u 1 en islandora_newspaper_batch
 drush -y -u 1 en islandora_openseadragon
 drush -y -u 1 en views_ui
-drush -y -u 1 en webform
-drush -y -u 1 en webform_ajax
-drush -y -u 1 en webform_bonus
-drush -y -u 1 en islandora_webform
-drush -y -u 1 en islandora_webform_ingest
+# drush -y -u 1 en webform
+# drush -y -u 1 en webform_ajax
+# drush -y -u 1 en webform_bonus
+# drush -y -u 1 en islandora_webform
+# drush -y -u 1 en islandora_webform_ingest
+drush -y -u 1 en islandora_access_override
+drush -y -u 1 en islandora_binary_object
+drush -y -u 1 en islandora_ip_embargo
+drush -y -u 1 en islandora_jwplayer
+drush -y -u 1 en islandora_scholar_templates
+drush -y -u 1 en islandora_serial_object
+drush -y -u 1 en islandora_usage_stats_callbacks
+drush -y -u 1 en flvc
+drush -y -u 1 en flvc_custom_display
+drush -y -u 1 en flvc_ir_custom
+drush -y -u 1 en flvc_policy_reflector
 drush openseadragon-plugin
 drush videojs-plugin
 drush pdfjs-plugin
@@ -153,10 +164,12 @@ drush -u 1 -y vset islandora_paged_content_gs "/usr/bin/gs"
 echo "Re-running the islandora_video_mp4_audio_codec vset!"
 drush @sites -u 1 -y vset islandora_video_mp4_audio_codec "aac"
 
-echo "Installing new citeproc v2 library for Islandora scholar"
-cd /var/www/html/sites/all/modules/islandora/islandora_scholar/modules/citeproc || exit
+drush -u 1 -y vset citeproc_backend "citeproc_backend_v1"
 
-composer install
+# echo "Installing new citeproc v2 library for Islandora scholar"
+# cd /var/www/html/sites/all/modules/islandora/islandora_scholar/modules/citeproc || exit
+
+# composer install
 
 echo "Back to /var/www/html/sites/all/modules"
 cd /var/www/html/sites/all/modules || exit
