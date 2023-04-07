@@ -114,6 +114,10 @@ projects[islandoratheme][download][branch]  = "master"
 projects[islandoratheme][download][url] = "https://github.com/FLVC/islandoratheme.git"
 projects[islandoratheme][download][overwrite] = TRUE
 
+projects[adaptivetheme][type] = "theme"
+projects[adaptivetheme][download][type] = "get"
+projects[adaptivetheme][download][url] = "https://ftp.drupal.org/files/projects/adaptivetheme-7.x-3.5.zip"
+
 projects[corolla][type] = "theme"
 projects[corolla][download][type] = "get"
 projects[corolla][download][url] = "https://ftp.drupal.org/files/projects/corolla-7.x-3.1.zip"
