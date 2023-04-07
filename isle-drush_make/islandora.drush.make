@@ -103,7 +103,7 @@ libraries[tuque][download][url] = "https://github.com/Islandora/tuque.git"
 
 ; libraries[islandora_internet_archive_bookreader][download][type] = "get"
 ; libraries[islandora_internet_archive_bookreader][download][url] = "https://github.com/Islandora/internet_archive_bookreader/archive/master.zip"
-; libraries[islandora_internet_archive_bookreader][directory_name] = "bookreader"
+; libraries[islandora_internet_archive_bookreader][directory_name] = "bookreader2"
 ; libraries[islandora_internet_archive_bookreader][type] = "library"
 
 ; Themes
